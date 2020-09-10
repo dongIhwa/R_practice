@@ -95,8 +95,8 @@ exam5(x=5,y="a")
 exam5(-1)
 
 # 문제6
-exam6 <- function(x){
-  xx <- x
+exam6 <- function(...){
+  xx <- c(...)
   for(n in 1:length(xx)){
     if(is.na(xx[n])){
       print("NA는 처리불가")
@@ -112,4 +112,4 @@ exam6 <- function(x){
   }
 }
 
-exam6(c(80, 50, 70, 66, NA, 35))
+exam6(80, 50, 70, 66, NA, 35)
