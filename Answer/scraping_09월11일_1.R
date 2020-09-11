@@ -41,11 +41,9 @@ h2_text_9
 # <ul> 태그의 자식 태그들 중 style 속성의 값이
 # green 으로 끝나는 태그의 컨텐츠
 # h2 자식 body > ul > li:nth-child(1)
-li_nodes <- html_nodes(text, "ul>li")
-li_attr <- html_attr(li_nodes, "style")
+li_nodes <- html_nodes(text, "ul>[style$=green]")
 li_text <- html_text(li_nodes)
-
-li_text[which(li_attr == "color:green")]
+li_text
 
 
 
